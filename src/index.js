@@ -51,18 +51,19 @@ const bot = new TelegramBot(token, {polling: true});
     bot.sendMessage(chatId, resp);
   });
 
-  bot.onText(/\/great (.+)/, (msg, match) => {
-      
-
+  bot.onText(/\/rate (.+)/, (msg, match) => {
+    console.log(msg,"<<<msg")    
+    console.log(match,"<<<match")
   const chatId = msg.chat.id;
-  const res = `Hello ${match[1]}, how are you ?`;
+  const res = `Hai ${match[1]}, what type of rate you need?`;
 
   bot.sendMessage(chatId, res);
 });
 
 
 bot.onText(/\/age (.+)/, (msg, match) => {
-      
+  console.log(msg,"<<<msg")    
+  console.log(match,"<<<match")    
   const chatId = msg.chat.id;
   const res = `Hello ${match[1]}, how old are you ?`;
 
