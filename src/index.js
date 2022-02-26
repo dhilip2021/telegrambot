@@ -55,12 +55,20 @@ const bot = new TelegramBot(token, {polling: true});
       
 
   const chatId = msg.chat.id;
-  const res = `Hello ${match[1]}, how are you doing?`;
+  const res = `Hello ${match[1]}, how are you ?`;
 
   bot.sendMessage(chatId, res);
 });
 
 
+bot.onText(/\/age (.+)/, (msg, match) => {
+      
+
+  const chatId = msg.chat.id;
+  const res = `Hello ${match[1]}, how old are you ?`;
+
+  bot.sendMessage(chatId, res);
+});
 
 
 
